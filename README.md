@@ -42,4 +42,4 @@ describe('Math', function () {
 });
 ```
 *Run the test => npm test*
-
+![testing result](./Images/testResult.png)
