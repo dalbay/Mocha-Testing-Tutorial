@@ -52,4 +52,26 @@ https://codeburst.io/how-to-test-javascript-with-mocha-part-2-2d83fcb6101a
 - add the the functions inside this object as methods of this object.
 - at the end of app.js add the convert object using module.exports - (this tells JavaScript what object to return as a result of a required call. )
 
+``` JavaScript
+/************************************************** */
 
+let convert = {};
+
+convert.getInventory = function(array){
+    if(!Array.isArray(array)) return undefined;
+    return array;
+};
+
+convert.getInventory = function(array,inputVar){
+    array.forEach(element => {
+        if(element.value === inputVar){
+            return 1;
+        }        
+    });
+};
+
+module.exports = convert;
+
+/************************************************** */
+```
+- require the app.js file in test.js and change function names used in our tests to include the convert object. Here is the test.js code:
