@@ -45,3 +45,11 @@ describe('Math', function () {
 ![testing result](./images/testResult.png)
 
 https://codeburst.io/how-to-test-javascript-with-mocha-part-2-2d83fcb6101a
+
+- Expose the functions inside the file to Mocha. Our test.js file needs to interact with our app.js file.
+*Here is one way to tackle this:*
+- Create an empty object (let ...)
+- add the the functions inside this object as methods of this object.
+- at the end of app.js add the convert object using module.exports - (this tells JavaScript what object to return as a result of a required call. )
+
+
