@@ -20,10 +20,10 @@ Mocha is a feature-rich JavaScript test framework running on Node.js and in the 
 
 #### Example
 *Here is a link for this example:* https://codeburst.io/how-to-test-javascript-with-mocha-the-basics-80132324752e
-1 Create a test group named Math
-2 Create two tests within the group Math.
-3 Test one: Should test if 3*3 = 9
-3 Test two: Should test if (3–4)*8 = -8
+1. Create a test group named Math
+2. Create two tests within the group Math.
+3. Test one: Should test if 3*3 = 9
+4. Test two: Should test if (3–4)*8 = -8
 ``` JavaScript
 // Require the built in 'assertion' library
 var assert = require('assert');
