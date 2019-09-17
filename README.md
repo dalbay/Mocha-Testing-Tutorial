@@ -67,8 +67,13 @@ describe('Array', function() {
 ![testing result](./images/testResult1.png)
 
 ---
-#### Test Example 3.
+#### Test Example 3. *Read external JavaScript file and test it inside test folder - Mocha*
 
+- Expose the functions inside the file to Mocha. Our test.js file needs to interact with our app.js file.
+*Here is one way to tackle this:*
+- Create an empty object (let ...)
+- add the the functions inside this object as methods of this object.
+- at the end of app.js add the convert object using module.exports - (this tells JavaScript what object to return as a result of a required call. )
 ``` JavaScript
 // app.js file is a Reference Class that we want to test.
 // test.js file is where we pass the class to. Here we have the data and test methods
@@ -96,32 +101,26 @@ describe('Check Element Existance',function(){
 
 - Expose the functions inside the file to Mocha. Our test.js file needs to interact with our app.js file.
 *Here is one way to tackle this:*
-- Create an empty object (let ...)
-- add the the functions inside this object as methods of this object.
-- at the end of app.js add the convert object using module.exports - (this tells JavaScript what object to return as a result of a required call. )
+- Create an empty object (This is the reference object that is going to be tested)
+- create the object methods.
+- at the end of app.js add this object to module.exports - (this tells JavaScript what object to return as a result of a required call. )
 
 ``` JavaScript
-/************************************************** */
-// create empty object
+// create empty object 
 let convert = {};
 
-// make each function a method of our new function
-convert.getInventory = function(array){
-    if(!Array.isArray(array)) return undefined;
-    return array;
-};
-
-convert.getInventory = function(array,inputVar){
-    array.forEach(element => {
-        if(element.value === inputVar){
-            return 1;
-        }        
-    });
+// make functions methods of the object.
+convert.checkElement = function(obj, strKey){
+    for(var key in obj){
+        if(key === strKey)
+        {
+            return key + " " + obj[key] ;        
+        }
+    }
 };
 
 // add the object using module.exports
 module.exports = convert;
 
-/************************************************** */
 ```
 - require the app.js file in test.js and change function names used in our tests to include the convert object. Here is the test.js code:
