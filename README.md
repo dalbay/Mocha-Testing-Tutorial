@@ -41,7 +41,7 @@ describe('Math', function () {
     });
 });
 ```
-*Run the test => npm test*
+*Run the test => ```npm test```*
 ![testing result](./images/testResult.png)
 
 https://codeburst.io/how-to-test-javascript-with-mocha-part-2-2d83fcb6101a
@@ -65,6 +65,33 @@ describe('Array', function() {
 ```
 *Run the test => ```npm test```*
 ![testing result](./images/testResult1.png)
+
+---
+#### Test Example 3.
+
+``` JavaScript
+// app.js file is a Reference Class that we want to test.
+// test.js file is where we pass the class to. Here we have the data and test methods
+
+var myInventory = {
+    water: 100,
+    soda: 100
+};
+let convert = require('../app.js');
+let assert = require('assert');
+
+
+describe('Check Element Existance',function(){
+    describe('checkElement',function(){
+        it('Should pass if the element exists.',function(){
+            assert.equal('soda 100',convert.checkElement(myInventory,'soda').toString());
+        });
+    });
+});
+
+```
+![testing result](./images/testResult2.png)
+
 
 
 - Expose the functions inside the file to Mocha. Our test.js file needs to interact with our app.js file.
