@@ -93,10 +93,27 @@ convert.checkElement = function(obj, strKey){
 module.exports = convert;
 ```
 - require the app.js file in test.js
-- here I make up some data
-- write test methods
+- make up some data
+- write test methods to test the functions inside app.js
 ``` JavaScript
+// test data
+var myInventory = {
+    water: 100,
+    soda: 100
+};
+// Require the app.js file
+let convert = require('../app.js');
+// Require the built in 'assertion' library
+let assert = require('assert');
 
+// test app.js functions
+describe('Check Element Existance',function(){
+    describe('checkElement',function(){
+        it('Should pass if the element exists.',function(){
+            assert.equal('soda 100',convert.checkElement(myInventory,'soda').toString());
+        });
+    });
+});
 ```
 *Run the test => ```npm test```*
 ![testing result](./images/testResult2.png)
