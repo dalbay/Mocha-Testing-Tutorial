@@ -18,7 +18,7 @@ Mocha is a feature-rich JavaScript test framework running on Node.js and in the 
 - write a test inside your test.js
 - run mocha -> npm test
 
-#### Example
+#### Test Example 1.
 *Here is a link for this example:* https://codeburst.io/how-to-test-javascript-with-mocha-the-basics-80132324752e
 1. Create a test group named Math
 2. Create two tests within the group Math.
@@ -45,6 +45,27 @@ describe('Math', function () {
 ![testing result](./images/testResult.png)
 
 https://codeburst.io/how-to-test-javascript-with-mocha-part-2-2d83fcb6101a
+
+---
+
+#### Test Example 2.
+
+``` JavaScript
+
+// Require the built in 'assertion' library
+var assert = require('assert');
+
+describe('Array', function() {
+  describe('#indexOf()', function() {
+    it('should return -1 when the value is not present', function(){
+      assert.equal(-1, [1,2,3].indexOf(4));
+    });
+  });
+});
+```
+*Run the test => ```npm test```*
+![testing result](./images/testResult1.png)
+
 
 - Expose the functions inside the file to Mocha. Our test.js file needs to interact with our app.js file.
 *Here is one way to tackle this:*
