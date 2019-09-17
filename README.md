@@ -54,9 +54,10 @@ https://codeburst.io/how-to-test-javascript-with-mocha-part-2-2d83fcb6101a
 
 ``` JavaScript
 /************************************************** */
-
+// create empty object
 let convert = {};
 
+// make each function a method of our new function
 convert.getInventory = function(array){
     if(!Array.isArray(array)) return undefined;
     return array;
@@ -70,6 +71,7 @@ convert.getInventory = function(array,inputVar){
     });
 };
 
+// add the object using module.exports
 module.exports = convert;
 
 /************************************************** */
