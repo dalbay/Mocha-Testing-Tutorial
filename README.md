@@ -17,7 +17,7 @@ Mocha is a feature-rich JavaScript test framework running on Node.js and in the 
 	  * package.json
 - write a test inside your test.js
 - run mocha -> npm test
-
+---
 #### Test Example 1.
 *Here is a link for this example:* https://codeburst.io/how-to-test-javascript-with-mocha-the-basics-80132324752e
 1. Create a test group named Math
