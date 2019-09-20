@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Array-Modal-Mocha</title>
+        <!-- Bootstrap -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <!-- your own style sheet -->
+        <link href="style.css" rel="stylesheet">
+            <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+
+</head>
+<body>
+    <!--Create an inventory array and associate a number with each item. Then get user input that purchases items (subtracts one from the item). *** HTML Code-->
+    <h2>Dynamic Inverntory display in Modal Box</h2>
+    <!-- Trigger/Open The Modal -->
+    <button id="myBtn">Open Modal</button>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <form>
+                <fieldset>
+                    <h4>Pick an item to add it to your cart:</h4>
+                    <ul>
+                        <table id="inventoryTable">
+                            <tr>
+                                <th id="product">Product</th>
+                                <th></th>
+                                <th>Quantity in Stock</th>
+                            </tr>
+                            <!--This is where we insert the data dynamically-->
+                        </table>
+                    </ul>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+    <!--link to an external javascript file-->
+    <script type="text/javascript" src="app.js"></script>
+</body>
+</html>
