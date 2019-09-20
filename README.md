@@ -67,7 +67,8 @@ describe('Array', function() {
 ![testing result](./images/testResult1.png)
 
 ---
-#### Test Example 3. *Read external JavaScript files and test it inside test folder - Mocha*
+#### Test Example 3. 
+**Read external JavaScript files and test it inside test folder - Mocha**
 
 - Expose the functions inside the file to Mocha. Our test.js file needs to interact with our app.js file.
   - *Here is one way to tackle this:*
